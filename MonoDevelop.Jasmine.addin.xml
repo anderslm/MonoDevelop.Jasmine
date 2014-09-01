@@ -1,0 +1,24 @@
+<Addin	id			= "MonoDevelop.Jasmine"  
+		namespace	= "MonoDevelop"  
+		name		= "Jasmine test runner"  
+		author		= "Anders Ladegaard Marchsteiner"  
+		copyright	= "GPLv3"  
+		description	= "Run JavaScript Jasmine tests"  
+		category	= "Testing"  
+		version		= "0.1">
+		
+    <Dependencies>
+        <Addin id="Core" version="5.0.1" />
+        <Addin id="Ide" version="5.0.1" />
+    </Dependencies>
+    
+	<Extension path="/MonoDevelop/Ide/Commands">
+		<Command id="MonoDevelop.Jasmine.Commands.SayHello"
+			_label="Run Jasmine Tests"
+			defaultHandler="MonoDevelop.Jasmine.SayHelloHandler" />
+	</Extension>
+
+	<Extension path="/MonoDevelop/Ide/ContextMenu/ProjectPad">
+		<CommandItem id="MonoDevelop.Jasmine.Commands.SayHello" />
+	</Extension>
+</Addin> 
